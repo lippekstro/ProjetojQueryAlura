@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/google-fonts.css">
+</head>
+<body>
+	<div class="container">
+	    <h1 class="center">Alura Typer</h1>
+	    <p class="frase center">Esta frase tem cinco palavras</p>
+	    <ul class="infos center">
+	    	<li>
+	    		<i class="small material-icons icones">description</i>
+	    		<span id="tamFrase">x</span> palavras
+	    	</li>
+	    	<li>
+	    		<i class="small material-icons icones">query_builder</i>
+	    		<span id="tempo">2</span> segundos
+	    	</li>
+	    </ul>
+
+	    <textarea id="campo-digitacao" rows="8" cols="40"></textarea>
+
+	    <div>
+	    	<a class="btn-floating btn-large waves-effect waves-light red" id="restart">
+	    		<i class="material-icons">replay</i>
+	    	</a>
+	    </div>
+
+	    <ul class="center">
+	    	<li><span id="contador-carac">0</span> Caracteres</li>
+	    	<li><span id="contador-palav">0</span> Palavras</li>
+	    </ul>
+
+	    <section class="placar">
+			<h3 class="center">Placar</h3>
+			<table class="centered bordered">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Nº de Palavras</th>
+						<th>Remover</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Fellipe</td>
+						<td>10957</td>
+						<td>
+							<i class="small material-icons icones">delete</i>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
+
+	
+
+
+
+    <script type="" src="js/jquery.js"></script>
+    <script type="" src="js/main.js"></script>
+    <script type="" src="js/placar.js"></script>
+</body>
+</html>

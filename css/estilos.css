@@ -1,0 +1,27 @@
+.frase {
+	font-size: 20px;
+	text-align: justify;
+}
+
+#campo-digitacao{
+	font-size: 20px;
+	height: 130px;
+	
+
+}
+
+.campo-desativado{
+	background-color: lightgrey;
+}
+
+.icones{
+	vertical-align: middle;
+}
+
+.digitado-errado{
+	border: 3px solid red;
+}
+
+.digitado-certo{
+	border: 3px solid green;
+}
