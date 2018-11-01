@@ -10,10 +10,23 @@ $(function(){
 	comparaFrase();
 	reinicializaJogo();
 	$("#restart").click(reinicializaJogo);
+	atualizaPlacar();
+	$("#usuarios").selectize({
+		create: true,
+		sortField: 'text'
+	});
+	$(".tooltip").tooltipster({
+		trigger: 'custom'
+	});
 });
 
+function atualizaTempoInicial(tempo){
+	tempoInicial = tempo;
+	$("#tempo").text(tempo);
+}
 
-function pegaTamFrase(){	
+function pegaTamFrase(){
+	var frase = $(".frase").text();	
 	var contaPalavras = frase.split(" ").length;
 	var tamFrase = $("#tamFrase");
 	tamFrase.text(contaPalavras);
@@ -30,9 +43,9 @@ function inicializaContadores(){
 }
 
 function inicializaCronometro(){
-	var tempoRestante = $("#tempo").text();
 	campo.one("focus", function(){
-		$("#restart").attr("disabled", true);
+		var tempoRestante = $("#tempo").text();
+		$("#restart").addClass("disabled");
 		var cronometroId = setInterval(function(){
 			tempoRestante--;
 			$("#tempo").text(tempoRestante);
@@ -46,13 +59,14 @@ function inicializaCronometro(){
 
 function finalizaJogo(){
 	campo.attr("disabled", true);			
-	$("#restart").attr("disabled", false);
+	$("#restart").removeClass("disabled");
 	campo.addClass("campo-desativado");
 	inserePlacar();
 }
 
 function comparaFrase(){
 	campo.on("input", function(){
+		var frase = $(".frase").text();
 		var conteudo = campo.val();
 		var comparavel = frase.substr(0, conteudo.length);
 		if(conteudo == comparavel){

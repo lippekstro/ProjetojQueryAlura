@@ -5,12 +5,20 @@
     <title>Alura Typer</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/selectize.default.css">
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css">
     <link rel="stylesheet" type="text/css" href="css/libs/google-fonts.css">
 </head>
 <body>
 	<div class="container">
 	    <h1 class="center">Alura Typer</h1>
 	    <p class="frase center">Esta frase tem cinco palavras</p>
+
+	    <div class="center">
+	    	<img src="img/spinner.gif" alt="Spinner" id="spinner">
+	    	<p id="erro">Ocorreu um erro, tente novamente</p>
+	    </div>
+
 	    <ul class="infos center">
 	    	<li>
 	    		<i class="small material-icons icones">description</i>
@@ -18,7 +26,7 @@
 	    	</li>
 	    	<li>
 	    		<i class="small material-icons icones">query_builder</i>
-	    		<span id="tempo">2</span> segundos
+	    		<span id="tempo">3</span> segundos
 	    	</li>
 	    </ul>
 
@@ -27,6 +35,32 @@
 	    <div>
 	    	<a class="btn-floating btn-large waves-effect waves-light red" id="restart">
 	    		<i class="material-icons">replay</i>
+	    	</a>
+
+	    	<a class="btn-floating btn-large waves-effect waves-light green" id="botao-placar">
+	    		<i class="material-icons">assignment</i>
+	    	</a>
+
+	    	<a class="btn-floating btn-large waves-effect waves-light blue" id="botao-frase">
+	    		<i class="material-icons">shuffle</i>
+	    	</a>
+
+	    	<a class="btn-floating btn-large waves-effect waves-light cyann" id="botao-frase-id">
+	    		<i class="material-icons">repeat_one</i>
+	    	</a>
+
+	    	<input type="number" name="" id="frase-id" min="0">
+
+	    	<div class="select-usuario">
+	    		<select id="usuarios">
+	    			<option value="Douglas">Douglas</option>
+	    			<option value="Flavio">Flavio</option>
+	    			<option value="Fellipe">Fellipe</option>
+	    		</select>
+	    	</div>
+
+	    	<a class="btn-floating btn-large waves-effect waves-light yellow tooltip" id="botao-synch" title="Sincronizado com sucesso">
+	    		<i class="material-icons">autorenew</i>
 	    	</a>
 	    </div>
 
@@ -65,5 +99,8 @@
     <script type="" src="js/jquery.js"></script>
     <script type="" src="js/main.js"></script>
     <script type="" src="js/placar.js"></script>
+    <script type="" src="js/frase.js"></script>
+    <script type="" src="js/selectize.js"></script>
+    <script type="" src="js/tooltipster.bundle.min.js"></script>
 </body>
 </html>
